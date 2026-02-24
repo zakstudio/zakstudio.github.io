@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FUENTES -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/estilosRESTAURANTE.css">
+
+  <title>Galería del Restaurante – L'Art Crêperie</title>
+</head>
+
+<body>
+
+    <!-- NAV DESKTOP -->
+    <nav class="nav-desktop">
+        <a href="index.html">L'Art Crêperie</a>
+        <a href="menuRestaurante.pdf">Carta</a>
+        <a href="GaleriaComida.html">Galería</a>
+        <a href="GaleriaRES.html">Interior</a> 
+        <a href="DondeEstamos.html">Dónde Estamos</a> 
+    </nav>
+
+    <!-- NAV MÓVIL -->
+    <div class="hamburguesa" id="hamburguesa">☰</div>
+
+    <div class="nav-movil" id="nav-movil">
+        <a href="index.html">L'Art Crêperie</a>
+        <a href="menuRestaurante.pdf">Carta</a>
+        <a href="GaleriaComida.html">Galería</a>
+        <a href="GaleriaRES.html">Interior</a>
+        <a href="DondeEstamos.html">Dónde Estamos</a>
+    </div>
+
+  <!-- GALERÍA INTERIOR -->
+  <section class="galeria-restaurante">
+    <h2>Conócenos</h2>
+
+    <div class="galeria-grid">
+        <img src="IMGRES/10.jpg" class="grande">
+        <img src="IMGRES/12.jpg">
+        <img src="IMGRES/3.jpg" class="vertical">
+        <img src="IMGRES/6.jpg">
+        <img src="IMGRES/5.jpg" class="grande">
+        <img src="IMGRES/4.jpg">
+        <img src="IMGRES/9.jpeg" class="vertical">
+        <img src="IMGRES/8.jpg">
+        <img src="IMGRES/1.jpg">
+        <img src="IMGRES/11.jpg" class="grande">
+        <img src="IMGRES/2.jpg">
+        <img src="IMGRES/7.jpg">
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- SECCIÓN ARTE -->
+  <section class="seccion-arte">
+    <div class="contenedor-arte">
+      <h2>Galería Artística</h2>
+
+      <div class="arte-grid">
+        <img src="IMGRES/A.jpg" alt="Cuadro decorativo">
+        <img src="IMGRES/D.jpeg" alt="Ilustración artística">
+        <img src="IMGRES/B.jpg" alt="Dibujo decorativo">
+        <img src="IMGRES/C.jpg" alt="Cuadro en el restaurante">
+      </div>
+    </div>
+  </section>
+
+  <!-- JS MENÚ HAMBURGUESA -->
+  <script>
+  const hamburguesa = document.getElementById("hamburguesa");
+  const navMovil = document.getElementById("nav-movil");
+
+  hamburguesa.addEventListener("click", () => {
+      navMovil.classList.toggle("activo");
+  });
+  </script>
+
+</body>
+</html>
+
+
+
+

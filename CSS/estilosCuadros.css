@@ -1,0 +1,15 @@
+body {            
+    background-image: url(../IMG/GirasolesVan.jpg),
+                      url(../IMG/ElGrito.webp),
+                      url(../IMG/Ola.jpg),
+                      url(../IMG/beso.webp);
+
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+
+    background-position: right top, left top, left bottom, left top;
+
+    background-size: contain, 25% 70%, 40% 30%, cover;
+
+    min-height: 100vh;
+    margin: 0;
+}   

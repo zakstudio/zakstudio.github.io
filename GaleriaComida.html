@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/estilosRESTAURANTE.css">
+
+    <title>Galería de Comida – L'Art Crêperie</title>
+</head>
+
+<body>
+
+    <!-- NAV DESKTOP -->
+    <nav class="nav-desktop">
+        <a href="index.html">L'Art Crêperie</a>
+        <a href="menuRestaurante.pdf">Carta</a>
+        <a href="GaleriaComida.html">Galería</a>
+        <a href="GaleriaRES.html">Interior</a>
+        <a href="DondeEstamos.html">Dónde Estamos</a>
+    </nav>
+
+    <!-- NAV MÓVIL -->
+    <div class="hamburguesa" id="hamburguesa">☰</div>
+
+    <div class="nav-movil" id="nav-movil">
+        <a href="index.html">L'Art Crêperie</a>
+        <a href="menuRestaurante.pdf">Carta</a>
+        <a href="GaleriaComida.html">Galería</a>
+        <a href="GaleriaRES.html">Interior</a>
+        <a href="DondeEstamos.html">Dónde Estamos</a>
+    </div>
+
+    <!-- TÍTULO -->
+    <header class="titulo-seccion">
+        <h1>Nuestra Galería Gastronómica</h1>
+        <h2>El arte de la comida en su máxima expresión</h2>
+    </header>
+
+    <!-- GALERÍA -->
+    <section class="galeria-comida">
+        <div class="masonry">
+            <img src="IMGRES/crepeHelado.png" alt="">
+            <img src="IMGRES/Cesar.png" alt="">
+            <img src="IMGRES/plato.png" alt="">
+            <img src="IMGRES/crepeVolcan.png" alt="">
+            <img src="IMGRES/crepZumo.png" alt="">
+            <img src="IMGRES/falafel.png" alt="">
+            <img src="IMGRES/crep.png" alt="">
+            <img src="IMGRES/crepeSalsa.png" alt="">
+            <img src="IMGRES/crep2helados.png" alt="">
+            <img src="IMGRES/salmon.png" alt="">
+            <img src="IMGRES/nutella.png" alt="">
+            <img src="IMGRES/tomate.png" alt="">
+            <img src="IMGRES/salmonCrep.png" alt="">
+            <img src="IMGRES/salmonycrep.png" alt="">
+        </div>
+    </section>
+
+    <!-- JS MENÚ HAMBURGUESA -->
+    <script>
+    const hamburguesa = document.getElementById("hamburguesa");
+    const navMovil = document.getElementById("nav-movil");
+
+    hamburguesa.addEventListener("click", () => {
+        navMovil.classList.toggle("activo");
+    });
+    </script>
+
+</body>
+</html>
+

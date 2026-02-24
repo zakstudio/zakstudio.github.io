@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/estilosRESTAURANTE.css">
+
+    <title>L'Art Crêperie</title>
+</head>
+
+<body>
+
+    <!-- NAV DESKTOP -->
+    <nav class="nav-desktop">
+        <a href="index.html">L'Art Crêperie</a>
+        <a href="menuRestaurante.pdf">Carta</a>
+        <a href="GaleriaComida.html">Galería</a>
+        <a href="GaleriaRES.html">Interior</a> 
+        <a href="DondeEstamos.html">Dónde Estamos</a>       
+    </nav>
+
+    <!-- NAV MÓVIL (HAMBURGUESA) -->
+    <div class="hamburguesa" id="hamburguesa">☰</div>
+
+    <div class="nav-movil" id="nav-movil">
+        <a href="index.html">L'Art Crêperie</a>
+        <a href="menuRestaurante.pdf">Carta</a>
+        <a href="GaleriaComida.html">Galería</a>
+        <a href="GaleriaRES.html">Interior</a>
+        <a href="DondeEstamos.html">Dónde Estamos</a>
+    </div>
+
+    <!-- TITULO -->
+    <h1>L'Art Crêperie</h1>
+    <h2>El Arte de la Crêpe en Madrid</h2>
+
+    <!-- CARRUSEL -->
+    <section class="carousel">
+        <div class="slide side">
+            <img id="img-left" src="" alt="">
+        </div>
+        <div class="slide active">
+            <img id="img-center" src="" alt="">
+        </div>
+        <div class="slide side">
+            <img id="img-right" src="" alt="">
+        </div>
+    </section>
+
+
+    <!-- PRESENTACIÓN -->
+    <section class="presentacion-flex fade-in">
+        <div class="presentacion-img">
+            <img src="IMGRES/interiorBarandilla.jpeg" alt="Interior del restaurante">
+        </div>
+
+        <div class="presentacion-texto">
+            <div class="boton-contenedor">
+                <a href="menuRestaurante.pdf" target="_blank" class="boton-carta">Ver menú</a>
+            </div>
+
+            <p>
+                Con más de 25 variedades de crêpes saladas y una selección artesanal de platos internacionales, en L'Art Crêperie transformamos la tradición bretona en una experiencia única en Madrid.
+            </p>
+
+            <p>
+                No somos solo crêpes: nuestra carta se extiende a hamburguesas de ternera 100%, pitas recién horneadas y raciones tradicionales como el Humus o el Burek.
+            </p>
+        </div>
+    </section>
+
+    <!-- JS CARRUSEL -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const images = [
+            "IMGRES/salmon.png",    
+            "IMGRES/tomate.png",   
+            "IMGRES/crep.png",
+            "IMGRES/Cesar.png"
+        ];
+
+        const imgLeft = document.getElementById("img-left");
+        const imgCenter = document.getElementById("img-center");
+        const imgRight = document.getElementById("img-right");
+
+        let index = 0;
+
+        function render() {
+            const total = images.length;
+            imgCenter.src = images[index];
+            imgLeft.src = images[(index - 1 + total) % total];
+            imgRight.src = images[(index + 1) % total];
+        }
+
+        render();
+
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            render();
+        }, 5000);
+    });
+    </script>
+
+    <!-- JS MENÚ HAMBURGUESA -->
+    <script>
+    const hamburguesa = document.getElementById("hamburguesa");
+    const navMovil = document.getElementById("nav-movil");
+
+    hamburguesa.addEventListener("click", () => {
+        navMovil.classList.toggle("activo");
+    });
+    </script>
+
+    <!-- JS ANIMACIONES -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const elementos = document.querySelectorAll('.fade-in');
+
+        const mostrar = () => {
+            elementos.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+
+        mostrar();
+        window.addEventListener('scroll', mostrar);
+    });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+body {
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  height: 100vh;            
+  margin: 0;                 
+  background-color: #dbe3c4;  
+  font-family: "MedievalSharp", cursive;
+}
+
+
+.card {
+  width: 250px;         
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(185, 31, 159, 0.941);
+  text-align: center;
+  transition: transform 0.3s ease;
+  animation: subir 0.8s ease-out; 
+}
+
+
+.card img {
+  width: 100%;          
+  border-radius: 8px; /*para que coincida con la tarjeta*/
+}
+
+
+.card:hover {
+  transform: scale(1.10);   
+}/*Para que se haga grande*/
+
+
+
+@keyframes parpadeo {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.card h2 {
+  animation: parpadeo 2s infinite; 
+}
+
+.card p {
+  padding:10px;
+}
+
+
+
+

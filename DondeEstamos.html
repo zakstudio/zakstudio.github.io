@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/estilosRESTAURANTE.css">
+
+    <title>Dónde Estamos – L'Art Crêperie</title>
+</head>
+
+<body>
+
+    <!-- NAV DESKTOP -->
+    <nav class="nav-desktop">
+        <a href="index.html">L'Art Crêperie</a>
+        <a href="menuRestaurante.pdf">Carta</a>
+        <a href="GaleriaComida.html">Galería</a>
+        <a href="GaleriaRES.html">Interior</a> 
+        <a href="DondeEstamos.html">Dónde Estamos</a> 
+    </nav>
+
+    <!-- NAV MÓVIL -->
+    <div class="hamburguesa" id="hamburguesa">☰</div>
+
+    <div class="nav-movil" id="nav-movil">
+        <a href="index.html">L'Art Crêperie</a>
+        <a href="menuRestaurante.pdf">Carta</a>
+        <a href="GaleriaComida.html">Galería</a>
+        <a href="GaleriaRES.html">Interior</a>
+        <a href="DondeEstamos.html">Dónde Estamos</a>
+    </div>
+
+    <!-- SECCIÓN DÓNDE ESTAMOS -->
+    <section class="donde-estamos">
+        <h1>Dónde Estamos</h1>
+
+        <div class="donde-grid">
+
+            <!-- TEXTO -->
+            <div class="donde-texto">
+                <h2>Visítanos en Madrid</h2>
+                <ul>
+                    <li>C. de Martín de los Heros, 5</li>
+                    <li>Moncloa - Aravaca</li>
+                    <li>28008 Madrid</li>
+                    <li>📞 +34 649 00 38 30</li>
+                    <hr>
+                    <li>HORARIO: Abierto todos los días hasta las 00:00</li>
+                </ul>
+            </div>
+
+            <!-- IMAGEN -->
+            <div class="donde-imagenes">
+                <img src="IMGRES/dondeEstamos.jpg" alt="Fachada del restaurante">
+            </div>
+
+        </div>
+
+        <!-- MAPA -->
+        <div class="mapa-contenedor">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.305967891612!2d-3.7160195245975407!3d40.42422335518416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42286f8bab6679%3A0x7d932688ca14e2a7!2sL&#39;Art%20Creperie!5e0!3m2!1ses!2ses!4v1771167488732!5m2!1ses!2ses" 
+                width="100%"
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </section>
+
+    <!-- JS MENÚ HAMBURGUESA -->
+    <script>
+    const hamburguesa = document.getElementById("hamburguesa");
+    const navMovil = document.getElementById("nav-movil");
+
+    hamburguesa.addEventListener("click", () => {
+        navMovil.classList.toggle("activo");
+    });
+    </script>
+
+</body>
+</html>
+

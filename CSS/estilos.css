@@ -1,0 +1,85 @@
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: auto; /* elimina el margen por defecto que hay a la derecha del todo (blanco) */
+        }
+
+
+        body.horario {
+            background-image: url(../IMG/fondo.jpg);
+        }
+        
+        nav {
+            background-color: black; 
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: rgb(255, 255, 255); 
+            text-decoration: none; 
+            margin: 28px; 
+            font-size: 17px;
+            
+        }
+        nav a:hover {
+            color: rgb(214, 194, 38); 
+        
+        }
+        h1 {
+            color: rgb(186, 166, 16);
+            text-align: center;
+            margin-top: 30px;
+            font-size: 36px
+        }
+
+        h2, h3 {
+            text-align: center;
+        }
+        .logo{
+            display: block; margin: auto; width: 390px; ;
+        }
+
+        .galeriaPrincipal {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .galeriaPrincipal img{
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .galeriaFotos{
+            text-align: center;
+            
+        }
+        .galeriaFotos div {
+            display: inline-block;
+            width: 400px;
+            margin: 20px;
+        }
+     
+        .galeriaFotos img {
+            width: 350px;
+            height: 350px;
+            margin: 10px;
+            border-radius: 8px;
+            object-fit: cover; /* Por si una imagen es más grande de lo que pone en las dimensiones, que se recorte */
+        }
+
+        table, th, td{
+            border: 3px solid rgb(0, 0, 0);
+            border-collapse: collapse;   
+            table-layout: fixed; 
+            margin: auto;
+            
+        }
+        th, td{
+            padding: 15px;
+        }
+        .tabla-centrada{
+            text-align: center;
+            color:rgb(214, 194, 38);
+        }
